@@ -1,6 +1,38 @@
-html,
+/* Сброс стандартных отступов браузера */
 body,
-#root {
-    height: 100%;
+html {
     margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    width: 700px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    border: none; /* Убираем границу */
+    background-color: transparent; /* Для наглядности */
+}
+
+.flex-container div {
+    width: 100px;
+    height: 100px;
+    background-color: #daa520;
+    border-radius: 50%;
+    margin: 0; /* Убираем отступы у кругов */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Центрируем 2-й и 4-й элементы */
+.flex-container div:nth-child(2),
+.flex-container div:nth-child(4) {
+    align-self: center;
+}
+
+/* 3-й элемент внизу */
+.flex-container div:nth-child(3) {
+    align-self: flex-end;
 }
